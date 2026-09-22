@@ -1,5 +1,5 @@
 /**
- * @brief
+ * @brief Suspended thread
  *
  */
 #include "../../common.hpp"

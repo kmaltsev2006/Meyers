@@ -7,7 +7,7 @@
  *
  * RVALUE
  * copies | moves
- *      0 |     2 (1 with RVO)
+ *      0 |     2 (1 with copy elision)
  */
 #include "../../common.hpp"
 
@@ -66,6 +66,6 @@ int main() {
     {
         std::print("RVALUE\n");
         VectorWrapper<LifeTime> v_wrapper;
-        v_wrapper.pushBack(LifeTime{}); // NRVO invoked
+        v_wrapper.pushBack(LifeTime{}); // copy elision invoked
     }
 }
